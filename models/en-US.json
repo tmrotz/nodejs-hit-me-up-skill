@@ -1,7 +1,7 @@
 {
   "interactionModel": {
       "languageModel": {
-          "invocationName": "hello world",
+          "invocationName": "hit me up",
           "intents": [
               {
                   "name": "AMAZON.CancelIntent",
@@ -16,16 +16,27 @@
                   "samples": []
               },
               {
-                  "name": "HelloWorldIntent",
+                  "name": "DankMemeIntent",
                   "slots": [],
                   "samples": [
-                      "hello",
-                      "how are you",
-                      "say hi world",
-                      "say hi",
-                      "hi",
-                      "say hello world",
-                      "say hello"
+                      "dank meme",
+                      "with a dank meme"
+                  ]
+              },
+              {
+                  "name": "SpicyMemeIntent",
+                  "slots": [],
+                  "samples": [
+                      "spicy meme",
+                      "with a spicy meme"
+                  ]
+              },
+              {
+                  "name": "MemeIntent",
+                  "slots": [],
+                  "samples": [
+                      "meme",
+                      "with a meme"
                   ]
               },
               {

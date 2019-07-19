@@ -3,14 +3,14 @@
     "publishingInformation": {
       "locales": {
         "en-US": {
-          "summary": "Sample Short Description",
+          "summary": "Returns hot/spicy/dank memes",
           "examplePhrases": [
-            "Alexa open hello world",
-            "hello",
-            "help"
+            "Alexa open hit me up",
+            "meme",
+            "dank meme"
           ],
-          "name": "Hello World",
-          "description": "Sample Full Description"
+          "name": "hit-me-up-nodejs-skill",
+          "description": "Lorem ipsum"
         }
       },
       "isAvailableWorldwide": true,
@@ -22,7 +22,7 @@
       "custom": {
         "endpoint": {
           "sourceDir": "lambda/custom",
-          "uri": "ask-custom-helloworld-default"
+          "uri": "ask-custom-hit-me-up-nodejs-skill-default"
         }
       }
     },
