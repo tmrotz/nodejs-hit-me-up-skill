@@ -1,24 +1,25 @@
-# Build An Alexa Hello World Skill
+# Hit Me Up! An Alexa Skill
 <img src="https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/quiz-game/header._TTH_.png" />
 
-### This is a simple tutorial to introduce a simple Alexa skill and code.
+### This is for tha gaming community! Especially Twitch Enthusiasts!
 
-## Skill Architecture
-Each skill consists of two basic parts, a front end and a back end.
-The front end is the voice interface, or VUI.
-The voice interface is configured through the voice interaction model.
-The back end is where the logic of your skill resides.
+## Current Features
+Say 'Hit Me Up!' to activate this skill
+ * Respond with 'Twitch Emote' to get a funny classic
+ * Respond with 'Meme' to hear a hilarious dank meme
+ * Respond with 'Copy Pasta' to have Alexa say
 
-## Three Options for Skill Setup
-There are a number of different ways for you to setup your skill, depending on your experience and what tools you have available.
+## Future Features
+ * Reach out to an API to make it more dynamic
+ * Different Voices
+ * Play sounds, not just Alexa reading text
+ * More interaction (It is nuts what you can do with Alexa)
 
- * If this is your first skill, choose the [Alexa-Hosted backend instructions](./instructions/setup-vui-alexa-hosted.md) to get started quickly.
- * If you want to manage the backend resources in your own AWS account, you can follow the [AWS-Hosted instructions](./instructions/setup-vui-aws-hosted.md).
- * Developers with the ASK Command Line Interface configured may follow the [ASK CLI instructions](./instructions/cli.md).
+## If this inspired you, then check out the instructions folder
 
 ---
 
-## Additional Resources
+## Resources
 
 ### Community
 * [Amazon Developer Forums](https://forums.developer.amazon.com/spaces/165/index.html) - Join the conversation!
