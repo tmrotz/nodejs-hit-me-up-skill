@@ -1,23 +1,5 @@
 {
   "manifest": {
-    "publishingInformation": {
-      "locales": {
-        "en-US": {
-          "summary": "Returns hot/spicy/dank memes",
-          "examplePhrases": [
-            "Alexa open hit me up",
-            "meme",
-            "dank meme"
-          ],
-          "name": "hit-me-up-nodejs-skill",
-          "description": "Lorem ipsum"
-        }
-      },
-      "isAvailableWorldwide": true,
-      "testingInstructions": "Sample Testing Instructions.",
-      "category": "KNOWLEDGE_AND_TRIVIA",
-      "distributionCountries": []
-    },
     "apis": {
       "custom": {
         "endpoint": {
@@ -26,6 +8,48 @@
         }
       }
     },
-    "manifestVersion": "1.0"
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "locales": {
+        "en-US": {
+          "privacyPolicyUrl": "http://travisrotz.com/alexa-privacy-policy.html",
+          "termsOfUseUrl": "http://travisrotz.com/alexa-terms-of-use.html"
+        }
+      },
+      "allowsPurchases": false,
+      "usesPersonalInfo": false,
+      "isChildDirected": false,
+      "isExportCompliant": true,
+      "containsAds": false
+    },
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "name": "Hit Me Up! by Travis Rotz",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/c5cf/33ca23aa33ad4a4485841b9f3f62727c/APP_ICON?versionId=7jNaqWChY94Yl4mxHHfCd.8uSVvR9C5K&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20190720T034636Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20190720%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=a863597420c4f32b4df0b9a546b6ffe17418ffea741c4d096846165dcd6dfdda",
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/c9fe/1d271a2a1ac04d85b8361c3c45e054a6/APP_ICON_LARGE?versionId=TyF7fRuuggFXwOORj44qv69.RLdBz87f&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20190720T034636Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20190720%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=c8bc9730b78daa608f8956865858486aec03b806fdcae1dc4625f1950b4e486f",
+          "summary": "Say \"Hit Me Up!\" for a Twitch Emote, Dank Meme, or Copy Pasta!",
+          "description": "I love to laugh! I made this mainly for myself. I think this skill is hilarious; It never stops amusing me.\nI also made this to learn how to make Alexa Skills using the Alexa Skills Kit (ASK). This was also made using the ASK CLI.",
+          "examplePhrases": [
+            "Alexa hit me up",
+            "twitch emote",
+            "copy pasta"
+          ],
+          "keywords": [
+            "memes",
+            "twitch",
+            "emote",
+            "copy",
+            "pasta"
+          ]
+        }
+      },
+      "isAvailableWorldwide": false,
+      "testingInstructions": "There a no testing instructions at this time. You should have everything you need to enjoy this skill at this point.",
+      "category": "NOVELTY",
+      "distributionCountries": [
+        "US"
+      ]
+    }
   }
 }

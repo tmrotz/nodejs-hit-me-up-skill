@@ -2,13 +2,20 @@
 // Please visit https://alexa.design/cookbook for additional examples on implementing slots, dialog management,
 // session persistence, api calls, and more.
 const Alexa = require('ask-sdk-core');
+const getMemes = require('./get-memes');
+const { copy_pasta, memes, twitch_emotes } = require('./content');
+
+function getRandomElement(array) {
+  const index = Math.floor(Math.random() * Math.floor(array.length));
+  return array[index];
+}
 
 const LaunchRequestHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
     },
     handle(handlerInput) {
-        const speakOutput = 'Welcome, you can say hot, spicy, or dank memes. Which would you like to try?';
+        const speakOutput = 'You can say copy pasta, twitch emote, or dank meme';
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .reprompt(speakOutput)
@@ -20,34 +27,51 @@ const DankMemeIntentHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'DankMemeIntent';
     },
-    handle(handlerInput) {
-        const speakOutput = 'Dank!';
+    async handle(handlerInput) {
+        const speakOutput = 'HEY KIDS DO YOU WANT SOME DANK MEMES?'
+        const asdf = await getMemes();
+        console.log(asdf);
         return handlerInput.responseBuilder
             .speak(speakOutput)
             //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
             .getResponse();
     }
 };
-const SpicyMemeIntentHandler = {
+const CopyPastaIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
-            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'SpicyMemeIntent';
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'CopyPastaIntent';
     },
     handle(handlerInput) {
-        const speakOutput = 'Spicy!';
+        const speakOutput = getRandomElement(copy_pasta);
         return handlerInput.responseBuilder
             .speak(speakOutput)
             //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
             .getResponse();
     }
 };
-const MemeIntentHandler = {
+
+const TwitchEmoteIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+        && Alexa.getIntentName(handlerInput.requestEnvelope) === 'TwitchEmoteIntent';
+    },
+    handle(handlerInput) {
+      const speakOutput = getRandomElement(twitch_emotes);
+      // const speakOutput = 'Yeet!';
+      return handlerInput.responseBuilder
+      .speak(speakOutput)
+            //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
+            .getResponse();
+    }
+  };
+  const MemeIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'MemeIntent';
     },
     handle(handlerInput) {
-        const speakOutput = 'Yeet!';
+        const speakOutput = getRandomElement(memes);
         return handlerInput.responseBuilder
             .speak(speakOutput)
             //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
@@ -135,7 +159,8 @@ exports.handler = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
         LaunchRequestHandler,
         DankMemeIntentHandler,
-        SpicyMemeIntentHandler,
+        CopyPastaIntentHandler,
+        TwitchEmoteIntentHandler,
         MemeIntentHandler,
         HelpIntentHandler,
         CancelAndStopIntentHandler,

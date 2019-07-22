@@ -1,50 +1,61 @@
 {
   "interactionModel": {
-      "languageModel": {
-          "invocationName": "hit me up",
-          "intents": [
-              {
-                  "name": "AMAZON.CancelIntent",
-                  "samples": []
-              },
-              {
-                  "name": "AMAZON.HelpIntent",
-                  "samples": []
-              },
-              {
-                  "name": "AMAZON.StopIntent",
-                  "samples": []
-              },
-              {
-                  "name": "DankMemeIntent",
-                  "slots": [],
-                  "samples": [
-                      "dank meme",
-                      "with a dank meme"
-                  ]
-              },
-              {
-                  "name": "SpicyMemeIntent",
-                  "slots": [],
-                  "samples": [
-                      "spicy meme",
-                      "with a spicy meme"
-                  ]
-              },
-              {
-                  "name": "MemeIntent",
-                  "slots": [],
-                  "samples": [
-                      "meme",
-                      "with a meme"
-                  ]
-              },
-              {
-                  "name": "AMAZON.NavigateHomeIntent",
-                  "samples": []
-              }
-          ],
-          "types": []
-      }
-  }
+    "languageModel": {
+      "invocationName": "hit me up",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "DankMemeIntent",
+          "slots": [],
+          "samples": [
+            "dank",
+            "dank meme",
+            "with a dank meme"
+          ]
+        },
+        {
+          "name": "CopyPastaIntent",
+          "slots": [],
+          "samples": [
+            "copy pasta",
+            "with a copy pasta"
+          ]
+        },
+        {
+          "name": "TwitchEmoteIntent",
+          "slots": [],
+          "samples": [
+            "twitch",
+            "twitch emote",
+            "with a twitch emote"
+          ]
+        },
+        {
+          "name": "MemeIntent",
+          "slots": [],
+          "samples": [
+            "meme",
+            "with a meme"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        }
+      ],
+      "types": []
+    }
+  },
+  "version": "11"
 }
